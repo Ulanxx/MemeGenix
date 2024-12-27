@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cyber-dark text-cyber-text font-tech;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-pixel;
+  }
+}
+
+@layer components {
+  .cyber-button {
+    @apply px-6 py-2 font-pixel text-sm bg-transparent border-2 border-cyber-primary 
+           text-cyber-primary hover:bg-cyber-primary hover:text-cyber-text
+           transition-all duration-300 hover:shadow-[0_0_15px_rgba(123,97,255,0.5)];
+  }
+
+  .cyber-card {
+    @apply bg-cyber-light border border-cyber-primary p-6 
+           shadow-[0_0_10px_rgba(123,97,255,0.2)] hover:shadow-[0_0_20px_rgba(123,97,255,0.4)]
+           transition-all duration-300;
+  }
+
+  .cyber-input {
+    @apply bg-cyber-dark border-2 border-cyber-primary text-cyber-text
+           px-4 py-2 font-tech focus:outline-none focus:border-cyber-accent
+           transition-all duration-300;
+  }
+}
